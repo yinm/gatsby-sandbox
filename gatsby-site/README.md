@@ -1,3 +1,5 @@
+ref: https://www.gatsbyjs.org/docs/
+
 # gatsby-starter-default
 The default Gatsby starter.
 
