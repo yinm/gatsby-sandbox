@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 
@@ -18,7 +17,7 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`Kyle Mathews`}
+          alt={'yinm'}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -27,10 +26,9 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>Kyle Mathews</strong> who lives and works in San
-          Francisco building useful things.{' '}
-          <a href="https://twitter.com/kylemathews">
-            You should follow him on Twitter
+          Written by <strong>yinm</strong>{' '}
+          <a href="https://twitter.com/_yinm_">
+            You should follow him on Twitter.
           </a>
         </p>
       </div>
