@@ -1,21 +1,22 @@
-import React from "react"
-import g from "glamorous"
+import React from 'react'
+import g from 'glamorous'
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from '../utils/typography'
 
-export default ({ data }) => {
+export default({ data }) => {
   console.log(data)
   return (
     <div>
-      <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
-        Amazing Pandas Eating Things
+      <g.H1 display={'inline-block'} borderBottom={'1px solid'}>
+        Amazing Pandas Eating things
       </g.H1>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div key={node.id}>
           <g.H3 marginBottom={rhythm(1 / 4)}>
             {node.frontmatter.title}{" "}
-            <g.Span color="#BBB">- {node.frontmatter.date}</g.Span>
+            <g.Span color="#bbb">- {node.frontmatter.date}</g.Span>
           </g.H3>
           <p>{node.excerpt}</p>
         </div>
@@ -26,16 +27,16 @@ export default ({ data }) => {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
-      totalCount
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
-          id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date
           }
           excerpt
+          timeToRead
+          html
         }
       }
     }
