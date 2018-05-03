@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const post = data.markdownRemark
   return (
     <div>
       <h1>{post.frontmatter.title}</h1>
@@ -16,7 +16,7 @@ export const query = graphql`
       html
       frontmatter {
         title
-      }    
-    }  
+      }
+    }
   }
 `
